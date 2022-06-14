@@ -4,7 +4,8 @@ Test app in ROR
 
 
 
-  <p>Dockerfile</p>
+  ####Dockerfile
+  ```
   from ruby:3.2-rc
   RUN apt update -qq && apt install -y nodejs postgresql-client && apt clean
 
@@ -14,9 +15,10 @@ Test app in ROR
   RUN bundle install
   EXPOSE 3000
   CMD ["rails", "server", "-b", "0.0.0.0"]
+  ```
   
-  
-  <p>Docker-compose</p>
+  ####Docker-compose
+  ```
   version: "3.3"
 services:
   db:
@@ -34,10 +36,11 @@ services:
       - "80:3000"
     depends_on:
       - db
+      ```
       
       
       
-   Run:
+   ####Run:
      docker-compose run web rails new . --database=postgresql
   
   
