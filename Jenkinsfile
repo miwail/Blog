@@ -9,12 +9,12 @@ pipeline {
     stages {
         stage ("build"){
             steps {
-                script{
-                echo 'Build # ${BUILD_NUMBER}'
-                sh '''cd /opt/test/'''
-                sh '''mkdir ${env.BUILD_NUMBER} && cd ${env.BUILD_NUMBER}'''
-                sh 'git clone ${GIT_URL}'
-                sh '''ls -l '''
+                script { """
+                echo Build #: ${BUILD_NUMBER}
+                sh cd /opt/test/
+                sh mkdir ${env.BUILD_NUMBER} && cd ${env.BUILD_NUMBER}
+                sh git clone ${GIT_URL}
+                sh ls -l"""
                 }
             }
         }
