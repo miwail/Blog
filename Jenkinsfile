@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label ROR
+        label "ROR"
     
     }
     environment {
