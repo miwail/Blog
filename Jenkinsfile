@@ -14,9 +14,10 @@ pipeline {
                     sh cd /opt/test/
                     sh mkdir ${env.BUILD_NUMBER} && cd ${env.BUILD_NUMBER}
                     sh git clone ${GIT_URL}
-                    sh tar --exclude='./.git' -czvf ${env.BUILD_NUMBER}.tar.gz /opt/test/blog/
+                    sh tar --exclude='./.git'  -czvf ${env.BUILD_NUMBER}.tar.gz /opt/test/blog/
                     """
                 }
+                sh "ls -la"
                 echo "Build stage complete succesfuly"
 
             }
