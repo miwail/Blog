@@ -23,7 +23,7 @@ pipeline {
     }
     post {
         always {
-            tar file: '${env.BUILD_NUMBER}.tar.gz', dir: '/opt/test/${env.BUILD_NUMBER}/'
+            sh "tar --exclude='./.git' -czv ${env.BUILD_NUMBER}.tar.gz /opt/test/${env.BUILD_NUMBER}"
 
             }
 
