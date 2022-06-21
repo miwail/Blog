@@ -10,17 +10,20 @@ pipeline {
         stage ("build"){
             steps {
                 script { """
-                echo Build #: ${BUILD_NUMBER}
-                sh cd /opt/test/
-                sh mkdir ${env.BUILD_NUMBER} && cd ${env.BUILD_NUMBER}
-                sh git clone ${GIT_URL}
-                sh ls -l"""
+                    echo Build #: ${BUILD_NUMBER}
+                    sh cd /opt/test/
+                    sh mkdir ${env.BUILD_NUMBER} && cd ${env.BUILD_NUMBER}
+                    sh git clone ${GIT_URL}
+                    """
                 }
+                echo "Build stage complete succesfuly"
+
             }
         }
-        stage ("deploy"){
-            steps {
-                echo "deplying app....."
+    post {
+        always {
+            tar file: '${env.BUILD_NUMBER}.tar.gz', dir: '/opt/test/${env.BUILD_NUMBER}/'
+
             }
 
         }
