@@ -17,7 +17,7 @@ pipeline {
                     
                     """
                 }
-                sh "tar --exclude='./.git'  -czvf ${env.BUILD_NUMBER}.tar.gz ."
+                sh "tar --ignore-failed-read --exclude='./.git'  -czvf ${env.BUILD_NUMBER}.tar.gz ."
                 echo "Build stage complete succesfuly"
 
             }
