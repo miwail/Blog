@@ -20,6 +20,7 @@ pipeline {
 
             }
         }
+    }
     post {
         always {
             tar file: '${env.BUILD_NUMBER}.tar.gz', dir: '/opt/test/${env.BUILD_NUMBER}/'
@@ -27,6 +28,6 @@ pipeline {
             }
 
         }
-    }
+    
 
 }
