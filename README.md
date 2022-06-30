@@ -1,6 +1,7 @@
 # README
 
 Test app in ROR
+Little pet-project 
 
 
 
