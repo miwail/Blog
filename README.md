@@ -55,12 +55,13 @@ Pet-project to learn some devops tools.
       - "80:3000"
     depends_on:
       - db
-```
+    ```
       
       
       
    ##### Run:
+   ```
      docker-compose run web rails new . --database=postgresql
-  
+   ```
   
 
