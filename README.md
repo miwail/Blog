@@ -39,7 +39,7 @@ Pet-project to learn some devops tools.
   ##### Docker-compose
   ```
   version: "3.3"
-services:
+  services:
   db:
     image: postgres
     volumes:
