@@ -1,6 +1,25 @@
 # README
 
-Test app in ROR
+Pet-project to learn some devops tools.
+
+#### TODO
+
+- Make some basic web app ( some blog or etc) ;
+- Deploy it in Docker;
+- Setup own GitLab server;
+
+- Setup Jenkins
+    - Create pipeline to :
+        - Build and deploy to prod env;
+         - Autobuild on new commit on gitlab ( test branch) to test env;
+    - Setup some artifact store service ?
+    
+- Deploy app in k8s;
+- Setup monitoring systems:
+    - Zabbix;
+    - ELK stack + Grafana;
+- Setup Patroni cluster;
+
 
 
 
@@ -20,7 +39,7 @@ Test app in ROR
   ##### Docker-compose
   ```
   version: "3.3"
-services:
+  services:
   db:
     image: postgres
     volumes:
@@ -36,12 +55,13 @@ services:
       - "80:3000"
     depends_on:
       - db
-```
+    ```
       
       
       
    ##### Run:
+   ```
      docker-compose run web rails new . --database=postgresql
-  
+   ```
   
 
