@@ -4,14 +4,14 @@ Pet-project to learn some devops tools.
 
 #### TODO
 
-- Make some basic web app ( some blog or etc) ;
-- Deploy it in Docker;
+~~- Make some basic web app ( some blog or etc) ;
+~~- Deploy it in Docker;
 - Setup own GitLab server;
 
 - Setup Jenkins
     - Create pipeline to :
         - Build and deploy to prod env;
-         - Autobuild on new commit on gitlab ( test branch) to test env;
+        - Autobuild on new commit on gitlab ( test branch) to test env;
     - Setup some artifact store service ?
     
 - Deploy app in k8s;
