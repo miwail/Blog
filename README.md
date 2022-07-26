@@ -19,6 +19,7 @@ Pet-project to learn some devops tools.
     - Zabbix;
     - ELK stack + Grafana;
 - Setup Patroni cluster;
+- Setup some load balancer ( like HaProxy)
 
 
 
