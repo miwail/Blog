@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<body>
   <head>
     <title>Myapp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,7 +11,22 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+
+    <header>
+      <div class="header">
+        <p> Some pet project </p>
+        <p><%= link_to "Add article", new_article_path %></p>
+      </div>
+  </header>
+  <div id="content">
+    <div id="menu">
+      <p><a href="http://192.168.105.140"><h1>Articles</h1></a></p>
+    </div>
     <%= yield %>
-  </body>
+  </div>
+  <footer>
+  <div class="footer">
+    <p class="copyright"> 2022 Zol</p>
+  </footer>
+</body>
 </html>
