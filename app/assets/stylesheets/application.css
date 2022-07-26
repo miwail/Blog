@@ -21,3 +21,17 @@ h1{
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
 }
+
+header{
+     min-height:50px; 
+     background:lightcyan; 
+}
+
+footer{ 
+    background:PapayaWhip; 
+}
+body{ 
+    min-height:100vh; 
+    margin:0; 
+    position:relative; 
+}
