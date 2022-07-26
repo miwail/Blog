@@ -1,19 +1,4 @@
 
-
-<body>
-
-  <header>
-    <div class="header">
-    <p> Some pet project </p>
-    <p><%= link_to "Add article", new_article_path %></p>
-    </div>
-  </header>
-
-  <div id="content">
-    <div id="menu">
-      <p><a href="http://192.168.105.140"><h1>Articles</h1></a></p>
-
-    </div>
       <% @articles.each do |article| %>
           <%= link_to article.title, article %>
           <div class="article-content">
@@ -24,9 +9,3 @@
   </div>
   
 
-
-  <footer>
-  <div class="footer">
-    <p class="copyright"> 2022 Zol</p>
-  </footer>
-</body>
